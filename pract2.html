@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var fname = document.myForm.firstname.value;
+    var lname = document.myForm.lastname.value;
+    var email = document.myForm.email.value;
+    var bday = document.myForm.birthday.value;
+    var gender = document.myForm.gender.value;
+
+    if (fname == "") {
+        alert("Please enter your first name");
+        document.myForm.firstname.focus();
+        return false;
+    }
+    if (lname == "") {
+        alert("Please enter your last name");
+        document.myForm.lastname.focus();
+        return false;
+    }
+    if (email == "") {
+        alert("Please enter your email");
+        document.myForm.email.focus();
+        return false;
+    }
+    if (bday == "") {
+        alert("Please enter your birth date");
+        document.myForm.birthday.focus();
+        return false;
+    }
+    if (gender == "") {
+        alert("Please select your gender");
+        document.myForm.gender.focus();
+        return false;
+    }
+
+    alert("Thank you for registering!");
+    return true;
+}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return validateForm()" method="post">
+    <h4>REGISTRATION FORM</h4>
+    <p><font color="red">*</font> Mandatory Fields</p>
+    <table>
+        <tr>
+            <td>First Name:*</td>
+            <td><input type="text" name="firstname"/></td>
+        </tr>
+        <tr>
+            <td>Last Name:*</td>
+            <td><input type="text" name="lastname"/></td>
+        </tr>
+        <tr>
+            <td>Email:*</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Date of Birth:*</td>
+            <td><input type="date" name="birthday"/></td>
+        </tr>
+        <tr>
+            <td>Your LinkedIn Website:*</td>
+            <td><input type="url" name="homepage" value=""/></td>
+        </tr>
+        <tr>
+            <td>Gender:*</td>
+            <td>
+                <select name="gender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" name="reg" value="Register"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

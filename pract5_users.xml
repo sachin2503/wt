@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<users>
+<user>
+<userid>sakshi</userid>
+<password>12345</password>
+</user>
+<user>
+<userid>naveen</userid>
+<password>12345</password>
+</user>
+<user>
+<userid>durga</userid>
+<password>12345</password>
+</user>
+<user>
+<userid>ramesh</userid>
+<password>12345</password>
+</user>
+</users>
